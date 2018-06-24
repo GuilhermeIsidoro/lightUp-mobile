@@ -62,6 +62,6 @@ public class NewDevice extends AppCompatActivity implements OnTaskCompleted {
 
         Intent home = new Intent(getApplicationContext(), Home.class);
         startActivity(home);
-        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), message.substring(12,51), Toast.LENGTH_LONG).show();
     }
 }

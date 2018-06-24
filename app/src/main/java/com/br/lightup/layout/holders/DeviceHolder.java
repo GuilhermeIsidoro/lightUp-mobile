@@ -59,6 +59,6 @@ public class DeviceHolder extends ViewHolder implements OnTaskCompleted {
     @Override
     public void callBack(String result) {
 
-        Toast.makeText(itemView.getContext(), result, Toast.LENGTH_LONG).show();
+        Toast.makeText(itemView.getContext(), result.substring(12,27), Toast.LENGTH_LONG).show();
     }
 }

@@ -88,6 +88,6 @@ public class UpdateDevice extends AppCompatActivity implements OnTaskCompleted {
 
         Intent home = new Intent(getApplicationContext(), Home.class);
         startActivity(home);
-        Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), result.substring(12,46), Toast.LENGTH_LONG).show();
     }
 }
