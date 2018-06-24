@@ -43,7 +43,7 @@ public class DeviceAdapter extends Adapter {
         Device device = devices.get(position);
 
         holder.deviceDescription.setText(device.getName());
-        holder.deviceStatsSwitch.setChecked((device.getStatus() == 1 ? true : false));
+        holder.deviceStatsSwitch.setChecked((device.getStatus() == 0 ? true : false));
 
         //Péssimo para uso de memória, mas é o que tem
         holder.device = device;
