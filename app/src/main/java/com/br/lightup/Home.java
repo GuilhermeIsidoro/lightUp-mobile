@@ -7,6 +7,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -52,10 +53,16 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         GetDeviceReturn retorno;
 
         retorno = gson.fromJson(result, GetDeviceReturn.class);
+        if(retorno != null){
+            DeviceAdapter adapter = new DeviceAdapter(retorno.getDevices(), this);
+            recyclerView.setAdapter(adapter);
+        } else {
+            Toast.makeText(getApplicationContext(), "Nenhum dispostivo listado", Toast.LENGTH_LONG).show();
+        }
 
-        DeviceAdapter adapter = new DeviceAdapter(retorno.getDevices(), this);
 
-        recyclerView.setAdapter(adapter);
+
+
 
     }
 
