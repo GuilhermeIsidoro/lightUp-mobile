@@ -7,7 +7,6 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -43,10 +42,9 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     @Override
     public void callBack(String result) {
 
-        if (result == null || result.isEmpty()) {
-
-            loadDevices();
-        }
+        /*if (result == null || result.isEmpty()) {
+            //loadDevices();
+        }*/
 
         Gson gson = new GsonBuilder().setDateFormat("dd-MM-yyyy HH:mm:ss").create();
 
@@ -57,12 +55,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             DeviceAdapter adapter = new DeviceAdapter(retorno.getDevices(), this);
             recyclerView.setAdapter(adapter);
         } else {
-            Toast.makeText(getApplicationContext(), "Nenhum dispostivo listado", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Falha ao buscar os dispostivos", Toast.LENGTH_LONG).show();
         }
-
-
-
-
 
     }
 
