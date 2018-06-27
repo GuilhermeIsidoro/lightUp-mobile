@@ -3,7 +3,10 @@ package com.br.lightup;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Switch;
@@ -26,7 +29,14 @@ public class UpdateDevice extends AppCompatActivity implements OnTaskCompleted {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.update_device);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.update_device_toolbar);
+        setSupportActionBar(myToolbar);
+        // Get a support ActionBar corresponding to this toolbar
+        ActionBar ab = getSupportActionBar();
 
+        // Enable the Up button
+        ab.setDisplayHomeAsUpEnabled(true);
+        ab.setHomeButtonEnabled(true);
         Intent updateIntent = getIntent();
 
         TextInputEditText Vname = (TextInputEditText) findViewById(R.id.devName);
@@ -58,6 +68,17 @@ public class UpdateDevice extends AppCompatActivity implements OnTaskCompleted {
         });
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                Intent home = new Intent(this, Home.class);
+                home.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(home);
+        }
+        return (super.onOptionsItemSelected(item));
+    }
+
     public void updateDevice() {
 
         String newDevName = ((TextInputEditText) findViewById(R.id.devName)).getText().toString();
@@ -87,7 +108,11 @@ public class UpdateDevice extends AppCompatActivity implements OnTaskCompleted {
     public void callBack(String result) {
 
         Intent home = new Intent(getApplicationContext(), Home.class);
+        if (result == null){
+            Toast.makeText(getApplicationContext(), "Falha ao alterar o dispositivo", Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(getApplicationContext(), result.substring(12,46), Toast.LENGTH_LONG).show();
+        }
         startActivity(home);
-        Toast.makeText(getApplicationContext(), result.substring(12,46), Toast.LENGTH_LONG).show();
     }
 }
