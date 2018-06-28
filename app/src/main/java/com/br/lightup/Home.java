@@ -42,20 +42,21 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     @Override
     public void callBack(String result) {
 
-        if (result == null || result.isEmpty()) {
-
-            loadDevices();
-        }
+        /*if (result == null || result.isEmpty()) {
+            //loadDevices();
+        }*/
 
         Gson gson = new GsonBuilder().setDateFormat("dd-MM-yyyy HH:mm:ss").create();
 
         GetDeviceReturn retorno;
 
         retorno = gson.fromJson(result, GetDeviceReturn.class);
-
-        DeviceAdapter adapter = new DeviceAdapter(retorno.getDevices(), this);
-
-        recyclerView.setAdapter(adapter);
+        if(retorno != null){
+            DeviceAdapter adapter = new DeviceAdapter(retorno.getDevices(), this);
+            recyclerView.setAdapter(adapter);
+        } else {
+            Toast.makeText(getApplicationContext(), "Falha ao buscar os dispostivos", Toast.LENGTH_LONG).show();
+        }
 
     }
 
