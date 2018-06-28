@@ -5,6 +5,12 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/adDDevice"
+            android:title="Adicionar dispositivo" />
+        <item
+            android:id="@+id/devicesInactives"
+            android:title="Dispositivos Inativos" />
+        <item
             android:id="@+id/reposrts"
             android:title="Relatórios" />
         <item
