@@ -45,6 +45,14 @@
             android:name=".PeriodCurrent"
             android:label="">
         </activity>
+        <activity
+            android:name=".Us"
+            android:label="">
+        </activity>
+        <activity
+            android:name=".Options"
+            android:label="">
+        </activity>
     </application>
 
 </manifest>
