@@ -14,9 +14,22 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <ImageView
+                android:layout_width="300px"
+                android:layout_height="100px"
+                android:layout_gravity="center_horizontal"
+                android:adjustViewBounds="false"
+
+                android:cropToPadding="false"
+                android:scaleType="center"
+                android:src="@mipmap/ic_launcher_foreground" />
+
+        </android.support.v7.widget.Toolbar>
+
 
     </android.support.design.widget.AppBarLayout>
 
@@ -32,6 +45,8 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         android:onClick="createAddDevice"
+        android:tint="@android:color/background_light"
+        app:backgroundTint="@color/ic_launcher_background"
         app:srcCompat="@android:drawable/ic_input_add" />
 
 </android.support.design.widget.CoordinatorLayout>

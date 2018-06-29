@@ -17,8 +17,9 @@ import com.br.lightup.util.Constants;
 
 public class DeviceHolder extends ViewHolder implements OnTaskCompleted {
 
-    public final TextView deviceDescription;
-    public final Switch deviceStatsSwitch;
+    public final TextView deviceName;
+    public final TextView deviceConsumption;
+    public final Switch deviceOnSwitch;
 
     public Device device;
 
@@ -26,10 +27,11 @@ public class DeviceHolder extends ViewHolder implements OnTaskCompleted {
 
         super(itemView);
 
-        deviceDescription = (TextView) itemView.findViewById(R.id.texto);
-        deviceStatsSwitch = (Switch) itemView.findViewById(R.id.deviceStatus);
+        deviceName = (TextView) itemView.findViewById(R.id.deviceName);
+        deviceConsumption = (TextView) itemView.findViewById(R.id.deviceConsumption);
+        deviceOnSwitch = (Switch) itemView.findViewById(R.id.deviceOnSwitch);
 
-        deviceStatsSwitch.setOnClickListener(new View.OnClickListener() {
+        deviceOnSwitch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -39,7 +41,7 @@ public class DeviceHolder extends ViewHolder implements OnTaskCompleted {
             }
         });
 
-        deviceDescription.setOnClickListener(new View.OnClickListener() {
+        deviceName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -59,6 +61,6 @@ public class DeviceHolder extends ViewHolder implements OnTaskCompleted {
     @Override
     public void callBack(String result) {
 
-        Toast.makeText(itemView.getContext(), result, Toast.LENGTH_LONG).show();
+        Toast.makeText(itemView.getContext(), result.substring(12,27), Toast.LENGTH_LONG).show();
     }
 }

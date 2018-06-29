@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".Home"
-            android:label="@string/app_name">
+            android:label="">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,21 +20,23 @@
         </activity>
         <activity
             android:name=".NewDevice"
-            android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:label="">
         </activity>
         <activity
             android:name=".UpdateDevice"
-            android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:label="">
+        </activity>
+        <activity
+            android:name=".Reports"
+            android:label="">
+        </activity>
+        <activity
+            android:name=".History"
+            android:label="">
+        </activity>
+        <activity
+            android:name=".PeriodCurrent"
+            android:label="">
         </activity>
     </application>
 
