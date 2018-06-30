@@ -3,6 +3,7 @@ package com.br.lightup;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +14,9 @@ import com.br.lightup.requests.NewDeviceRequest;
 import com.br.lightup.rest.PostRequest;
 import com.br.lightup.util.Constants;
 import com.google.gson.Gson;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
+import android.widget.TextView;
 
 public class NewDevice extends AppCompatActivity implements OnTaskCompleted {
 
@@ -21,6 +25,15 @@ public class NewDevice extends AppCompatActivity implements OnTaskCompleted {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.new_device);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.add_device_toolbar);
+        setSupportActionBar(myToolbar);
+
+        // Get a support ActionBar corresponding to this toolbar
+        ActionBar ab = getSupportActionBar();
+
+        // Enable the Up button
+        ab.setDisplayHomeAsUpEnabled(true);
+        ab.setHomeButtonEnabled(true);
 
         Button add = findViewById(R.id.addButton);
 
@@ -30,6 +43,17 @@ public class NewDevice extends AppCompatActivity implements OnTaskCompleted {
                 addDevice();
             }
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                Intent home = new Intent(this, Home.class);
+                home.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(home);
+        }
+        return (super.onOptionsItemSelected(item));
     }
 
     public void addDevice() {
@@ -61,7 +85,11 @@ public class NewDevice extends AppCompatActivity implements OnTaskCompleted {
     public void callBack(String message) {
 
         Intent home = new Intent(getApplicationContext(), Home.class);
+        if (message == null){
+            Toast.makeText(getApplicationContext(), "Falha ao adicionar o dispositivo", Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(getApplicationContext(), message.substring(12,51), Toast.LENGTH_LONG).show();
+        }
         startActivity(home);
-        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
     }
 }

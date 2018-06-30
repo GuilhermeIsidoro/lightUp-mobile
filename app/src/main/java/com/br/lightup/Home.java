@@ -42,20 +42,21 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     @Override
     public void callBack(String result) {
 
-        if (result == null || result.isEmpty()) {
-
-            loadDevices();
-        }
+        /*if (result == null || result.isEmpty()) {
+            //loadDevices();
+        }*/
 
         Gson gson = new GsonBuilder().setDateFormat("dd-MM-yyyy HH:mm:ss").create();
 
         GetDeviceReturn retorno;
 
         retorno = gson.fromJson(result, GetDeviceReturn.class);
-
-        DeviceAdapter adapter = new DeviceAdapter(retorno.getDevices(), this);
-
-        recyclerView.setAdapter(adapter);
+        if(retorno != null){
+            DeviceAdapter adapter = new DeviceAdapter(retorno.getDevices(), this);
+            recyclerView.setAdapter(adapter);
+        } else {
+            Toast.makeText(getApplicationContext(), "Falha ao buscar os dispostivos", Toast.LENGTH_LONG).show();
+        }
 
     }
 
@@ -134,6 +135,23 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        return false;
+        int id = item.getItemId();
+        if(id == R.id.reports){
+            Intent reports = new Intent(Home.this, Reports.class);
+            startActivity(reports);
+        }
+        if(id == R.id.options){
+            Intent options = new Intent(Home.this, Options.class);
+            startActivity(options);
+        }
+        if(id == R.id.us){
+            Intent us = new Intent(Home.this, Us.class);
+            startActivity(us);
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+
+        return true;
     }
 }

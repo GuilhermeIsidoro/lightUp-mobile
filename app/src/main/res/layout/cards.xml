@@ -18,7 +18,7 @@
             android:padding="16dp">
 
             <Switch
-                android:id="@+id/deviceStatus"
+                android:id="@+id/deviceOnSwitch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -27,12 +27,28 @@
                 android:textColorLink="@android:color/darker_gray" />
 
             <TextView
-                android:id="@+id/texto"
-                android:layout_width="228dp"
-                android:layout_height="wrap_content"
+                android:id="@+id/deviceName"
+                android:layout_width="224dp"
+                android:layout_height="24dp"
+                android:layout_above="@+id/deviceOnSwitch"
                 android:layout_alignParentStart="true"
+                android:layout_marginBottom="-13dp"
+                android:layout_marginStart="0dp" />
+
+            <View
+                android:layout_width="163dp"
+                android:layout_height="1dp"
+                android:layout_alignStart="@+id/deviceName"
                 android:layout_centerVertical="true"
-                android:layout_marginStart="14dp" />
+                android:background="@color/cardview_dark_background"
+                android:focusable="false" />
+
+            <TextView
+                android:id="@+id/deviceConsumption"
+                android:layout_width="224dp"
+                android:layout_height="24dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/deviceName" />
 
         </RelativeLayout>
 
