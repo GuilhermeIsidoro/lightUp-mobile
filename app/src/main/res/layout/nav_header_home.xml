@@ -15,12 +15,13 @@
     <ImageView
         android:src="@drawable/ic_adb_white_24dp"
         android:layout_width="75dp"
-        android:layout_height="75dp" />
+        android:layout_height="75dp"
+        android:contentDescription="@string/user_image" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="User"
+        android:text="@string/user_name"
         android:textColor="@color/cardview_light_background"
         android:textStyle="bold"
         android:layout_marginTop="5dp"/>
@@ -29,6 +30,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/cardview_light_background"
-        android:text="User@gmail.com"/>
+        android:text="@string/user_email"/>
 
 </LinearLayout>

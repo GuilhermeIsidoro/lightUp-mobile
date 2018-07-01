@@ -6,19 +6,19 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/devicesInactives"
-            android:title="Dispositivos Inativos"
+            android:title="@string/devicesInactives"
             android:icon="@drawable/ic_devices_black_24dp"/>
         <item
             android:id="@+id/reports"
-            android:title="Relatórios"
+            android:title="@string/reports"
             android:icon="@drawable/ic_equalizer_black_24dp"/>
         <item
             android:id="@+id/options"
-            android:title="Opções"
+            android:title="@string/options"
             android:icon="@drawable/ic_menu_manage"/>
         <item
             android:id="@+id/us"
-            android:title="Quem Somos"
+            android:title="@string/us"
             android:icon="@drawable/ic_info_black_24dp"/>
     </group>
 </menu>

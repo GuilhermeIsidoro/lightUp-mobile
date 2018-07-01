@@ -14,37 +14,33 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay">
 
             <ImageView
-                android:layout_width="300px"
-                android:layout_height="100px"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
                 android:adjustViewBounds="false"
-
                 android:cropToPadding="false"
                 android:scaleType="center"
-                android:src="@mipmap/ic_launcher_foreground" />
+                android:src="@mipmap/ic_launcher_foreground"
+                android:contentDescription="@string/home_logo" />
 
         </android.support.v7.widget.Toolbar>
-
 
     </android.support.design.widget.AppBarLayout>
 
     <include
-        layout="@layout/content_home"
-        android:layout_height="430dp" />
+        layout="@layout/content_home"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/add"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        android:onClick="createAddDevice"
         android:tint="@android:color/background_light"
         app:backgroundTint="@color/ic_launcher_background"
         app:srcCompat="@android:drawable/ic_input_add" />

@@ -6,4 +6,46 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="devicesInactives">Dispositivos Inativos</string>
+    <string name="reports">Relatórios</string>
+    <string name="period_current">Período Atual</string>
+    <string name="history">Histórico</string>
+    <string name="options">Opções</string>
+    <string name="us">Quem Somos</string>
+    <string name="student_caio">Caio Henrique Maia Menezes, 22 anos. Cientista da Computação (UniCEUB, 2018).</string>
+    <string name="student_everton">Everton Galdino da Silva, 22 anos. Cientista da Computação (UniCEUB, 2018).</string>
+    <string name="student_guilherme">Guilherme Isidoro Alves da Silva, 22 anos. Cientista da Computação (UniCEUB, 2018).</string>
+    <string name="student_higo">Higo Soares do Lago, 22 anos. Cientista da Computação (UniCEUB, 2018).</string>
+    <string name="student_jose">José Maria dos Reis Lisboa, 22 anos. Cientista da Computação (UniCEUB, 2018).</string>
+    <string name="student_litchi">Litchi Sun Zulato, 22 anos. Cientista da Computação (UniCEUB, 2018).</string>
+    <string name="student_college">Cientista da Computação (UniCEUB, 2018).</string>
+    <string name="us_first_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin maximus,
+    orci sit amet lacinia lobortis, sapien orci sollicitudin ligula, non luctus dui ligula vitae orci.
+    Nunc volutpat faucibus libero ac semper. Curabitur eu commodo ex. Quisque elementum neque ut enim cursus,
+    at hendrerit enim hendrerit. Cras ac leo vitae neque luctus efficitur in id tortor. In hac habitasse platea dictumst.</string>
+    <string name="us_second_text">Fica ligado nas nosssas redes!</string>
+    <string name="user_image">Image Profile</string>
+    <string name="user_name">User</string>
+    <string name="user_email">User@gmail.com</string>
+    <string name="home_logo">Logo da Home</string>
+    <string name="us_image">Imagens Quem Somos</string>
+    <string name="options_image">Imagens Opções</string>
+    <string name="us_media_image">Imagens de Mídias Sociais</string>
+    <string name="add_device">Adicionar dispositivo</string>
+    <string name="add_bottom">Adicionar</string>
+    <string name="update_device">Alterar dispositivo</string>
+    <string name="update_bottom">Alterar</string>
+    <string name="device_name">Nome do dispositivo</string>
+    <string name="device_consumption">Potência do dispositivo em Watts</string>
+    <string name="device_on">Ativo</string>
+    <string name="device_off">Inativo</string>
+    <string name="enable_notifications">Ativa/r notificações</string>
+    <string name="evaluate_app">Avalie nosso app</string>
+    <string name="report_error">Deseja relatar algum erro?</string>
+    <string name="report_error2">Pode falar com a a gente!</string>
+    <string name="app_version">Versão do app: x.y.z</string>
+
+
+
+
 </resources>

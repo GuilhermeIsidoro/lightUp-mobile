@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@id/us"
+    android:orientation="vertical"
     tools:context=".Us">
 
     <android.support.design.widget.AppBarLayout
@@ -16,21 +15,21 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/us_tollbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay">
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/textView1"
                 android:layout_width="236dp"
                 android:layout_height="36dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:text="Quem Somos"
+                android:text="@string/us"
                 android:textColor="@color/cardview_light_background"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 app:layout_constraintBottom_toTopOf="@+id/textInputLayout5"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.503"
@@ -42,5 +41,181 @@
 
     </android.support.design.widget.AppBarLayout>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_gravity="center_horizontal" >
 
-</android.support.constraint.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="56dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="56dp">
+
+                <TextView
+                    android:id="@+id/textView09"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/us_first_text"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="15sp"
+                    tools:layout_editor_absoluteX="25dp"
+                    tools:layout_editor_absoluteY="69dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                android:paddingEnd="40dp"
+                android:paddingStart="40dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="56dp">
+
+                <TextView
+                    android:id="@+id/textView0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/us_second_text"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="54dp"
+                    tools:layout_editor_absoluteY="221dp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                android:paddingEnd="60dp"
+                android:paddingStart="60dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="56dp">
+
+                <ImageView
+                    android:id="@+id/facebook"
+                    android:layout_width="32dp"
+                    android:layout_height="27dp"
+                    android:layout_marginStart="20dp"
+                    android:contentDescription="@string/us_media_image"
+                    app:srcCompat="@drawable/ic_facebook_logo"
+                    tools:layout_editor_absoluteX="81dp"
+                    tools:layout_editor_absoluteY="257dp" />
+
+                <ImageView
+                    android:id="@+id/instagram"
+                    android:layout_width="33dp"
+                    android:layout_height="27dp"
+                    android:layout_marginStart="20dp"
+                    android:contentDescription="@string/us_media_image"
+                    app:srcCompat="@drawable/ic_instagram"
+                    tools:layout_editor_absoluteX="130dp"
+                    tools:layout_editor_absoluteY="257dp" />
+
+                <ImageView
+                    android:id="@+id/github"
+                    android:layout_width="33dp"
+                    android:layout_height="27dp"
+                    android:layout_marginStart="20dp"
+                    android:contentDescription="@string/us_media_image"
+                    app:srcCompat="@drawable/ic_github_logo"
+                    tools:layout_editor_absoluteX="176dp"
+                    tools:layout_editor_absoluteY="257dp" />
+
+                <ImageView
+                    android:id="@+id/linkdein"
+                    android:layout_width="33dp"
+                    android:layout_height="27dp"
+                    android:layout_marginStart="20dp"
+                    android:contentDescription="@string/us_media_image"
+                    app:srcCompat="@drawable/ic_linkedin"
+                    tools:layout_editor_absoluteX="226dp"
+                    tools:layout_editor_absoluteY="257dp" />
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/ic_person_black_24dp"
+                android:text="@string/student_everton"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/ic_person_black_24dp"
+                android:text="@string/student_caio"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/ic_person_black_24dp"
+                android:text="@string/student_guilherme"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/ic_person_black_24dp"
+                android:text="@string/student_higo"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/ic_person_black_24dp"
+                android:text="@string/student_jose"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/ic_person_black_24dp"
+                android:text="@string/student_litchi"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="15sp" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -16,8 +16,8 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/reports_tollbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay">
 
             <TextView
@@ -28,9 +28,9 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:text="Relatórios"
+                android:text="@string/reports"
                 android:textColor="@color/cardview_light_background"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 app:layout_constraintBottom_toTopOf="@+id/textInputLayout5"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.503"
@@ -49,12 +49,10 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="40dp"
-        android:onClick="addDevice"
-        android:text="Período Atual"
+        android:text="@string/period_current"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4"
         app:layout_constraintVertical_bias="0.606" />
 
     <Button
@@ -65,11 +63,10 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="40dp"
-        android:text="Histórico"
+        android:text="@string/history"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4"
         app:layout_constraintVertical_bias="0.606" />
 
 

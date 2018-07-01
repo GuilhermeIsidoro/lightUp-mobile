@@ -15,8 +15,8 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/update_device_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
         app:popupTheme="@style/AppTheme.PopupOverlay">
 
         <TextView
@@ -27,9 +27,9 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="Alterando dispositivo"
+            android:text="@string/update_device"
             android:textColor="@color/cardview_light_background"
-            android:textSize="50px"
+            android:textSize="25sp"
             app:layout_constraintBottom_toTopOf="@+id/textInputLayout5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.503"
@@ -56,7 +56,7 @@
             android:id="@+id/devName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nome do dispositivo" />
+            android:hint="@string/device_name" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -75,7 +75,7 @@
             android:id="@+id/devCons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Potência do dispositivo em Watts"
+            android:hint="@string/device_consumption"
             android:inputType="number" />
     </android.support.design.widget.TextInputLayout>
 
@@ -87,8 +87,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="40dp"
-        android:onClick="addDevice"
-        android:text="Alterar"
+        android:text="@string/update_bottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -106,8 +105,8 @@
         android:layout_marginTop="8dp"
         android:showText="true"
         android:splitTrack="false"
-        android:textOff="Inativo"
-        android:textOn="Ativo"
+        android:textOff="@string/device_off"
+        android:textOn="@string/device_on"
         app:layout_constraintBottom_toTopOf="@+id/updateButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".Us">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/us_tollbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="236dp"
+                android:layout_height="36dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/us"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/textInputLayout5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_gravity="center_horizontal" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="56dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="56dp">
+
+                <TextView
+                    android:id="@+id/textView09"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/us_first_text"
+                    android:textColor="@color/cardview_dark_background"
+                    tools:layout_editor_absoluteX="25dp"
+                    tools:layout_editor_absoluteY="69dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                android:paddingEnd="40dp"
+                android:paddingStart="40dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="56dp">
+
+                <TextView
+                    android:id="@+id/textView0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/us_second_text"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="54dp"
+                    tools:layout_editor_absoluteY="221dp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                android:paddingEnd="60dp"
+                android:paddingStart="60dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="56dp">
+
+                <ImageView
+                    android:id="@+id/facebook"
+                    android:layout_width="32dp"
+                    android:layout_height="27dp"
+                    android:layout_marginStart="20dp"
+                    android:contentDescription="@string/us_media_image"
+                    app:srcCompat="@drawable/ic_facebook_logo"
+                    tools:layout_editor_absoluteX="81dp"
+                    tools:layout_editor_absoluteY="257dp" />
+
+                <ImageView
+                    android:id="@+id/instagram"
+                    android:layout_width="33dp"
+                    android:layout_height="27dp"
+                    android:layout_marginStart="20dp"
+                    android:contentDescription="@string/us_media_image"
+                    app:srcCompat="@drawable/ic_instagram"
+                    tools:layout_editor_absoluteX="130dp"
+                    tools:layout_editor_absoluteY="257dp" />
+
+                <ImageView
+                    android:id="@+id/github"
+                    android:layout_width="33dp"
+                    android:layout_height="27dp"
+                    android:layout_marginStart="20dp"
+                    android:contentDescription="@string/us_media_image"
+                    app:srcCompat="@drawable/ic_github_logo"
+                    tools:layout_editor_absoluteX="176dp"
+                    tools:layout_editor_absoluteY="257dp" />
+
+                <ImageView
+                    android:id="@+id/linkdein"
+                    android:layout_width="33dp"
+                    android:layout_height="27dp"
+                    android:layout_marginStart="20dp"
+                    android:contentDescription="@string/us_media_image"
+                    app:srcCompat="@drawable/ic_linkedin"
+                    tools:layout_editor_absoluteX="226dp"
+                    tools:layout_editor_absoluteY="257dp" />
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="56dp">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="78dp"
+                    android:layout_height="78dp"
+                    android:contentDescription="@string/us_image"
+                    app:srcCompat="@drawable/ic_person_black_24dp"
+                    tools:layout_editor_absoluteX="43dp"
+                    tools:layout_editor_absoluteY="303dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="56dp">
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="187dp"
+                        android:layout_height="35dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/student_caio"
+                        android:textColor="@color/cardview_dark_background"
+                        tools:layout_editor_absoluteX="152dp"
+                        tools:layout_editor_absoluteY="307dp" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="187dp"
+                        android:layout_height="34dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/student_college"
+                        android:textColor="@color/cardview_dark_background"
+                        tools:layout_editor_absoluteX="152dp"
+                        tools:layout_editor_absoluteY="331dp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="56dp">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="78dp"
+                    android:layout_height="78dp"
+                    android:contentDescription="@string/us_image"
+                    app:srcCompat="@drawable/ic_person_black_24dp"
+                    tools:layout_editor_absoluteX="43dp"
+                    tools:layout_editor_absoluteY="383dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="56dp">
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="186dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/student_everton"
+                        android:textColor="@color/cardview_dark_background"
+                        tools:layout_editor_absoluteX="155dp"
+                        tools:layout_editor_absoluteY="383dp" />
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="187dp"
+                        android:layout_height="34dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/student_college"
+                        android:textColor="@color/cardview_dark_background"
+                        tools:layout_editor_absoluteX="155dp"
+                        tools:layout_editor_absoluteY="409dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="56dp">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="78dp"
+                    android:layout_height="78dp"
+                    android:contentDescription="@string/us_image"
+                    app:srcCompat="@drawable/ic_person_black_24dp"
+                    tools:layout_editor_absoluteX="43dp"
+                    tools:layout_editor_absoluteY="468dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="56dp">
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="187dp"
+                        android:layout_height="43dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/student_guilherme"
+                        android:textColor="@color/cardview_dark_background"
+                        tools:layout_editor_absoluteX="155dp"
+                        tools:layout_editor_absoluteY="468dp" />
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="187dp"
+                        android:layout_height="34dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/student_college"
+                        android:textColor="@color/cardview_dark_background"
+                        tools:layout_editor_absoluteX="155dp"
+                        tools:layout_editor_absoluteY="493dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="56dp">
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="78dp"
+                    android:layout_height="78dp"
+                    android:contentDescription="@string/us_image"
+                    app:srcCompat="@drawable/ic_person_black_24dp"
+                    tools:layout_editor_absoluteX="43dp"
+                    tools:layout_editor_absoluteY="564dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="56dp">
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="187dp"
+                        android:layout_height="41dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/student_higo"
+                        android:textColor="@color/cardview_dark_background"
+                        tools:layout_editor_absoluteX="155dp"
+                        tools:layout_editor_absoluteY="565dp" />
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="187dp"
+                        android:layout_height="34dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/student_college"
+                        android:textColor="@color/cardview_dark_background"
+                        tools:layout_editor_absoluteX="155dp"
+                        tools:layout_editor_absoluteY="591dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="56dp">
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="78dp"
+                    android:layout_height="78dp"
+                    android:contentDescription="@string/user_image"
+                    app:srcCompat="@drawable/ic_person_black_24dp"
+                    tools:layout_editor_absoluteX="43dp"
+                    tools:layout_editor_absoluteY="564dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="56dp">
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="186dp"
+                        android:layout_height="40dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/student_jose"
+                        android:textColor="@color/cardview_dark_background"
+                        tools:layout_editor_absoluteX="155dp"
+                        tools:layout_editor_absoluteY="565dp" />
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="187dp"
+                        android:layout_height="34dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/student_college"
+                        android:textColor="@color/cardview_dark_background"
+                        tools:layout_editor_absoluteX="155dp"
+                        tools:layout_editor_absoluteY="591dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="56dp">
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="78dp"
+                    android:layout_height="78dp"
+                    android:contentDescription="@string/us_image"
+                    app:srcCompat="@drawable/ic_person_black_24dp"
+                    tools:layout_editor_absoluteX="43dp"
+                    tools:layout_editor_absoluteY="564dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="56dp">
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="186dp"
+                        android:layout_height="35dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/student_litchi"
+                        android:textColor="@color/cardview_dark_background"
+                        tools:layout_editor_absoluteX="155dp"
+                        tools:layout_editor_absoluteY="565dp" />
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="187dp"
+                        android:layout_height="34dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/student_college"
+                        android:textColor="@color/cardview_dark_background"
+                        tools:layout_editor_absoluteX="155dp"
+                        tools:layout_editor_absoluteY="591dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
