@@ -13,7 +13,10 @@ import com.br.lightup.UpdateDevice;
 import com.br.lightup.interfaces.OnTaskCompleted;
 import com.br.lightup.model.Device;
 import com.br.lightup.rest.PostRequest;
+import com.br.lightup.returns.GetDeviceReturn;
 import com.br.lightup.util.Constants;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 public class DeviceHolder extends ViewHolder implements OnTaskCompleted {
 
@@ -60,7 +63,13 @@ public class DeviceHolder extends ViewHolder implements OnTaskCompleted {
 
     @Override
     public void callBack(String result) {
-
-        Toast.makeText(itemView.getContext(), result.substring(12,27), Toast.LENGTH_LONG).show();
+        String mensagemFinal = "Falha ao mudar estado do dispositivo";
+        if (result != null && result != "") {
+            Gson gson = new GsonBuilder().create();
+            GetDeviceReturn retorno;
+            retorno = gson.fromJson(result, GetDeviceReturn.class);
+            mensagemFinal = retorno.getMessage();
+        }
+        Toast.makeText(itemView.getContext(),mensagemFinal, Toast.LENGTH_LONG).show();
     }
 }

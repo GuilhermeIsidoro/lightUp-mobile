@@ -10,10 +10,14 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.br.lightup.interfaces.OnTaskCompleted;
+import com.br.lightup.layout.adapters.DeviceAdapter;
 import com.br.lightup.requests.NewDeviceRequest;
 import com.br.lightup.rest.PostRequest;
+import com.br.lightup.returns.GetDeviceReturn;
 import com.br.lightup.util.Constants;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -84,12 +88,16 @@ public class NewDevice extends AppCompatActivity implements OnTaskCompleted {
     @Override
     public void callBack(String message) {
 
-        Intent home = new Intent(getApplicationContext(), Home.class);
-        if (message == null){
-            Toast.makeText(getApplicationContext(), "Falha ao adicionar o dispositivo", Toast.LENGTH_LONG).show();
-        } else {
-            Toast.makeText(getApplicationContext(), message.substring(12,51), Toast.LENGTH_LONG).show();
+        String mensagemFinal = "Falha ao adicionar o dispositivo";
+        if (message != null && message != ""){
+            Gson gson = new GsonBuilder().create();
+            GetDeviceReturn retorno;
+            retorno = gson.fromJson(message, GetDeviceReturn.class);
+            mensagemFinal = retorno.getMessage();
         }
+        Intent home = new Intent(getApplicationContext(), Home.class);
+        Toast.makeText(getApplicationContext(), mensagemFinal, Toast.LENGTH_LONG).show();
         startActivity(home);
+
     }
 }

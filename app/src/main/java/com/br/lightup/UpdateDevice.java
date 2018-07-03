@@ -16,8 +16,10 @@ import com.br.lightup.interfaces.OnTaskCompleted;
 import com.br.lightup.model.Device;
 import com.br.lightup.requests.UpdateDeviceRequest;
 import com.br.lightup.rest.PostRequest;
+import com.br.lightup.returns.GetDeviceReturn;
 import com.br.lightup.util.Constants;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 public class UpdateDevice extends AppCompatActivity implements OnTaskCompleted {
 
@@ -107,12 +109,15 @@ public class UpdateDevice extends AppCompatActivity implements OnTaskCompleted {
     @Override
     public void callBack(String result) {
 
-        Intent home = new Intent(getApplicationContext(), Home.class);
-        if (result == null){
-            Toast.makeText(getApplicationContext(), "Falha ao alterar o dispositivo", Toast.LENGTH_LONG).show();
-        } else {
-            Toast.makeText(getApplicationContext(), result.substring(12,46), Toast.LENGTH_LONG).show();
+        String mensagemFinal = "Falha ao atualizar o dispositivo";
+        if (result != null && result != ""){
+            Gson gson = new GsonBuilder().create();
+            GetDeviceReturn retorno;
+            retorno = gson.fromJson(result, GetDeviceReturn.class);
+            mensagemFinal = retorno.getMessage();
         }
+        Intent home = new Intent(getApplicationContext(), Home.class);
+        Toast.makeText(getApplicationContext(), mensagemFinal, Toast.LENGTH_LONG).show();
         startActivity(home);
     }
 }

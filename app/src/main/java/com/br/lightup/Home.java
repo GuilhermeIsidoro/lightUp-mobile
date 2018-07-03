@@ -42,16 +42,10 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     @Override
     public void callBack(String result) {
 
-        /*if (result == null || result.isEmpty()) {
-            //loadDevices();
-        }*/
-
-        Gson gson = new GsonBuilder().setDateFormat("dd-MM-yyyy HH:mm:ss").create();
-
-        GetDeviceReturn retorno;
-
-        retorno = gson.fromJson(result, GetDeviceReturn.class);
-        if(retorno != null){
+        if (result != null && result != "") {
+            Gson gson = new GsonBuilder().setDateFormat("dd-MM-yyyy HH:mm:ss").create();
+            GetDeviceReturn retorno;
+            retorno = gson.fromJson(result, GetDeviceReturn.class);
             DeviceAdapter adapter = new DeviceAdapter(retorno.getDevices(), this);
             recyclerView.setAdapter(adapter);
         } else {
